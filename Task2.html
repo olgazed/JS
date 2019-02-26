@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Task 2: A function that compares two parameters</title>
+</head>
+
+<body>
+  
+  <script>
+
+  /*Task 2. FDE 
+  Create function comp which should compare two parameters a and b 
+  and return 1 if a equal b and -1 if a not equal b 
+  using Function Definition Expression (FDE). 
+  Call this function before its declaration. 
+  Test Data: a = “abc”, b = “abc”, result = 1 
+  a = “abC”, b = “abc”, result = -1*/
+
+    var comp = function(a, b) { 
+      if (a === b) {
+      return 1;
+      }
+      else {
+      return -1;
+      }
+    };
+    
+    /*Function Expression cannot be called before its declaration*/
+
+    console.log( comp("abc", "abc") );
+    console.log( comp("abC", "abc") );
+
+    console.log( comp("0fg", "0fg") );
+    console.log( comp("0fg", "ofg") );
+
+    console.log( comp("5", 5) );
+    
+
+</script>
+
+</body>
+
+</html>

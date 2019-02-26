@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Task 6: A function that compares two parameters</title>
+</head>
+
+<body>
+  
+  <script>
+
+  /*Task 6. Arguments Object 
+  Create function parts which takes several parameters. 
+  Each parameter is a group of sentences. 
+  This function should extract the substring from the sign “:”(colon) 
+  to the sign “.”(period) of each parameter 
+  and return the array of this substrings 
+  Use Function Definition Expression. 
+  Test Data: param1 = "This is the first sentence. 
+  This is a sentence with a list of items: cherries, oranges, apples, bananas."
+  param2 = "This is the second sentence. 
+  This is a sentence with a list of items: red, blue, yellow, black." 
+  result = [“cherries, oranges, apples, bananas”, “red, blue, yellow, black”]*/
+
+    var parts = function(param1, param2) {
+     param1 = param1.substring(param1.indexOf(":") + 1, param1.lastIndexOf("."));
+     param2 = param2.substring(param2.indexOf(":") + 1, param2.lastIndexOf(".")); 
+     return [param1 + "," + param2]; 
+    };
+    
+    param1 = "This is the first sentence. This is a sentence with a list of items: cherries, oranges, apples, bananas."
+    param2 = "This is the second sentence. This is a sentence with a list of items: red, blue, yellow, black."
+    console.log( parts(param1, param2) );
+    
+   /* part1 = param1.Substring(param1.IndexOf(":") + 1);
+      part2 = param2.Substring(param2.IndexOf(":") + 1);
+    return param1.split(":")(1) + param2.split(":")(1)*/
+
+</script>
+
+</body>
+
+</html>

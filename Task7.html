@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Task 7: A function that returns the position of test string in testString</title>
+</head>
+
+<body>
+  
+  <script>
+
+  /*Task 7. Optional Arguments 
+  Create function find(testString, test) 
+  which should return the position of test string in testString. 
+  If you don’t pass the second parameter use test = testString. 
+  Use Function Definition Expression. 
+  Test Data: testString = “abc”, test =”b”, result = 1 
+  testString = “abc”, result = 0 
+  testString = ”abc”, test = “d”, result = -1 
+  testString = “abc”, test=”a”, test2=”b”, result = 0  */
+
+    var find = function(testString, test) {
+      if (typeof test === undefined || find.arguments.length == 1) { 
+      return 0;
+    }
+      else {
+      return testString.indexOf(test)
+      }
+    };
+    
+    testString = "abc";
+    test = "b";
+    console.log( find(testString, test) );
+
+    testString = "abc";
+    console.log( find(testString) );
+
+    testString = "abc"; 
+    test = "d";
+    console.log( find(testString, test) );
+
+    testString = "abc";
+    test= "a";
+    test2= "b";
+    console.log( find(testString, test) );
+
+    testString = "abc";
+    test = "c";
+    console.log( find(testString, test) );
+
+    testString = "abcdefghijk";
+    test = "k";
+    console.log( find(testString, test) );
+
+
+   /* else if (typeof test === null) {
+      test = testString;
+      return 0;}*/
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Task 4: A function that calculates fibonachi numbers</title>
+</head>
+
+<body>
+  
+  <script>
+
+  /*Task 4. NFE 
+  Create function fibo to calculate fibonachi numbers 
+  using named function expression*/
+
+    var fibo = function fibo(n) { 
+      if (n === 1) {
+      return [0, 1];
+      }
+
+      else {
+        var s = fibo(n - 1);
+        s.push(s[s.length - 1] + s[s.length - 2]);
+      return s;
+      }
+    };
+
+    console.log( fibo(7) );
+    console.log( fibo(21) );
+
+</script>
+
+</body>
+
+</html>
