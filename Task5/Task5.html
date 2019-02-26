@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Task 5: A TreeView</title>
+	<link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+  
+  <style>
+
+    * {
+      margin: 0;
+ 	    padding: 0;
+    }
+
+    h1 {
+ 	    font-size: 2rem;
+      padding-bottom: 2%;
+      padding-top: 5%;
+      text-align: center;
+    }
+
+    div {
+      padding-left: 40%;
+    }
+
+    ul {
+      font-size: 1.2rem;
+      text-align: left;
+      padding: 3%;
+    }
+
+    li {
+      margin-left: 3%;
+    }
+
+    span:hover {
+      font-weight: bold;
+    }
+
+    span {
+      cursor: pointer;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <h1>A TreeView</h1>
+  <div id="treeViewList"></div>
+
+  <script>
+
+    /*Task 5. Create a TreeView component
+    * Initially only the top items must be visible
+    * On item click
+    * If its children are hidden (collapsed), they must be made visible (expanded)
+    * If its children are visible (expanded), they must be made hidden (collapsed)
+    * Research about events
+
+    see example in "http://i.imgur.com/cqaTqTC.png"*/
+
+
+    var div = document.getElementById("treeViewList");
+    var myArray = ["Item 1", ["Sub-l Item 1", "Sub-l Item 2", ["Sub-Sub-l Item 1", "Sub-Sub-l Item 2", "Sub-Sub-l Item 3", "Sub-Sub-l Item 4"], "Sub-l Item 3", "Sub-l Item 4"], "Item 2", ["Sub-l Item 1", "Sub-l Item 2", "Sub-l Item 3", "Sub-l Item 4", ["Sub-Sub-l Item 1", "Sub-Sub-l Item 2", "Sub-Sub-l Item 3", "Sub-Sub-l Item 4"], "Sub-l Item 5"], "Item 3", "Item 4",["Sub-l Item 1", "Sub-l Item 2", "Sub-l Item 3"], "Item 5", "Item 6"];
+
+    function arrToUl(div, arr) {
+
+      var ul = document.createElement("ul");
+      var li;
+      div.appendChild(ul);
+     
+      arr.forEach(function(item) { 
+        if (Array.isArray(item)) {
+          arrToUl(li, item);
+            return; 
+        } 
+
+      li = document.createElement("li");
+      li.appendChild(document.createTextNode(item));
+      ul.appendChild(li);
+      var span = document.createElement("span");
+      li.insertBefore(span, li.firstChild);
+      span.appendChild(span.nextSibling);
+      }); 
+
+    }; 
+
+    arrToUl(div, myArray);
+
+
+    var tree = document.getElementsByTagName("ul")[0];
+
+    tree.onclick = function(event) {
+      var target = event.target;
+
+      if (target.tagName != "SPAN") {
+        return;
+      }
+      
+      var childrenContainer = target.parentNode.getElementsByTagName("ul")[0];
+      if (!childrenContainer) return;
+
+      childrenContainer.hidden = !childrenContainer.hidden;
+    }
+
+  </script>
+
+</body>
+
+</html>
