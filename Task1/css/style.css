@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+ 	padding: 0;
+ }
+
+section {
+ 	width: 70%;
+  height: 700px;
+	margin: 0 auto;
+	font-family: "EB Garamond", serif;
+	color: #254746;
+	background-color: #c6fffd;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+h1 {
+ 	font-size: 2rem;
+  text-align: center;
+  margin-bottom: 5rem;
+  padding-top: 5%;
+}
+
+p {
+  margin-top: 5%;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#rectangle {
+  width: 457px;
+  height: 230px;
+  padding: 10px;
+  border: 2px solid #191742;
+  border-radius: 5px;
+  position: relative;
+}
+
+.square {
+  float: left;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  font-weight: bold;
+  color: #201d47;
+  border: 2px solid #191742;
+  border-radius: 5px;
+  margin: 5px;
+  text-align: center;
+}
+
+.roundedButton {
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(255,255,255,.2), 0 -1px rgba(0,0,0,.8);
+  outline: none;
+  border: none;
+  border-radius: 100px;
+  background: rgb(28,107,114) radial-gradient(150% 100% at 50% 5px, rgba(255,255,255,.2), rgba(0,0,0,0));
+  box-shadow: inset rgba(0,0,0,.6) 0 -2px 5px, inset rgba(252,255,255,.7) 0 2px 5px, rgba(0,0,0,.8) 0 2px 5px -1px;
+  color: rgb(0,79,86);
+  user-select: none;
+} 
+
+.roundedButton:hover {
+  color: rgb(0,59,66);
+  cursor: pointer;
+}
+
+.roundedButton:active {
+  padding-bottom: 1px;
+  box-shadow:
+  inset rgba(0,0,0,1) 0 1px 3px,
+  inset rgba(0,0,0,.6) 0 -2px 5px,
+  inset rgba(252,255,255,.7) 0 2px 5px, 0 1px rgba(255,255,255,.08);
+  color: rgb(128,207,214);
+}
+
+.buttons {
+	padding-bottom: 10%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+button:first-of-type {
+	margin-right: 10%;
+}
