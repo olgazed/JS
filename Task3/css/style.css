@@ -1,0 +1,33 @@
+/*Styles for Task3*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    background: #fff;
+    font-family: "Caudex", serif;
+    color: #1c243a;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-top: 3%;
+}
+
+#container {
+    margin: 5% auto;
+}
+
+div > div {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    background-color: #c881f4;
+    border: 50px solid #fff;
+    font-size: 2rem;
+    color: #32363d;
+}
